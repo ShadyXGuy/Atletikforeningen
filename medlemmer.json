@@ -55,6 +55,20 @@
          "Fødselsdag": "1981-05-06",
          "Kontingent": 200,
          "id": 817678192202205722
+      },
+      {
+         "Medlemsnummer": 9,
+         "Navn": "Alidia McGoon",
+         "Fødselsdag": "1950-10-17",
+         "Kontingent": 150,
+         "id": 493240608583143601
+      },
+      {
+         "Medlemsnummer": 10,
+         "Navn": "Osgood Tollet",
+         "Fødselsdag": "1979-09-30",
+         "Kontingent": 200,
+         "id": 331529466223300867
       }
    ]
 }

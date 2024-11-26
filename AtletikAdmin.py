@@ -34,11 +34,25 @@ def generate_team_list(discipline):
 
 # Denne funktion tilføjer et medlem til tabellen 'Medlemmer'
 def add_member(name, birthdate, fee):
-    pass
+    valid = False
+    number = len(medlemmer.getAll())
+    for medlem in medlemmer.getAll():
+        if medlem['Navn']==name and medlem['Fødselsdag']==birthdate and medlem['Kontingent']==fee:
+            valid = True
+            break
+    if not valid:
+        medlemmer.add({'Medlemsnummer':number + 1, 'Navn':name, 'Fødselsdag':birthdate, 'Kontingent':fee})
 
 # Denne funktion tilføjer en tilmelding til tabellen 'Tilmeldinger'
 def add_participant(member_id, discipline, is_coach):
-    pass
+    valid = False
+    for entry in tilmeldinger.getAll():
+        if entry['Medlem']==member_id and entry['Disciplin']==discipline:
+            valid = True
+            break
+    if not valid:
+        tilmeldinger.add({'Medlem': member_id, 'Disciplin': discipline, 'Træner': is_coach})
+
 
 
 if __name__ == '__main__':
