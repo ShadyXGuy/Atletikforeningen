@@ -24,12 +24,12 @@ def find_unique_teams():
 
 # Denne funktion returnerer en liste af navne, som har en tilmelding på den valgte disciplin
 def generate_team_list(discipline):
-#    listNamefromDiscipline = []
-#    disciplines = tilmeldinger.getBy({'Disciplin':discipline})
-#    for row in disciplines:
-#        persons = medlemmer.getBy({'Medlemsnummer':row['Medlem']})
-#        listNamefromDiscipline.append(persons[0]['Navn'])
-#    return listNamefromDiscipline
+    listNamefromDiscipline = []
+    disciplines = tilmeldinger.getBy({'Disciplin':discipline})
+    for row in disciplines:
+        persons = medlemmer.getBy({'Medlemsnummer':row['Medlem']})
+        listNamefromDiscipline.append(persons[0]['Navn'])
+    return listNamefromDiscipline
 
 
 # Denne funktion tilføjer et medlem til tabellen 'Medlemmer'
