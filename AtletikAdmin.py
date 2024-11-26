@@ -14,11 +14,23 @@ def table_to_text(table):
 
 # Denne funktion returnerer en liste af hold fra tabellen 'Tilmeldinger' uden dubletter
 def find_unique_teams():
-    pass
+    data = tilmeldinger.getAll()
+    disc = []
+    for row in data:
+        if row['Disciplin'] not in disc:
+            disc.append(row['Disciplin'])
+    return disc
+
 
 # Denne funktion returnerer en liste af navne, som har en tilmelding på den valgte disciplin
 def generate_team_list(discipline):
-    pass
+#    listNamefromDiscipline = []
+#    disciplines = tilmeldinger.getBy({'Disciplin':discipline})
+#    for row in disciplines:
+#        persons = medlemmer.getBy({'Medlemsnummer':row['Medlem']})
+#        listNamefromDiscipline.append(persons[0]['Navn'])
+#    return listNamefromDiscipline
+
 
 # Denne funktion tilføjer et medlem til tabellen 'Medlemmer'
 def add_member(name, birthdate, fee):
