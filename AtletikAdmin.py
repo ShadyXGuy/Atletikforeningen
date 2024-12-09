@@ -53,6 +53,18 @@ def add_participant(member_id, discipline, is_coach):
     if not valid:
         tilmeldinger.add({'Medlem': member_id, 'Disciplin': discipline, 'Træner': is_coach})
 
+#funktion som kan ændre træner status og sportsgræn for medlemmer
+#benytter .update til at gøre dette (orignal data til dict)
+#(nye data skal ændres til derefter)
+member_id = input('enter memeber id')
+def modifyMember(member_id, is_coach):
+    for entry in tilmeldinger.getAll():
+        if entry['id'] == member_id:
+            tilmeldinger.update({'Træner':false, 'Træner':true, 'Disciplin':''}, {'Træner':true})
+
+
+
+
 
 
 if __name__ == '__main__':
